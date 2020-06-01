@@ -1,11 +1,17 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import './styles.css';
 
-function Link({ active }) {
-	const activeClass = active ? 'menu__link--active' : '';
+function Link({ active, primary }) {
+	const classes = classNames({
+		'menu__link': true,
+		'menu__link--active': active,
+		'menu__link--primary': primary
+	});
+
 	return(
-		<a href="/" className={`menu__link ${activeClass}`}>Name</a>
+		<a href="/" className={classes}>Name</a>
 	);
 }
 

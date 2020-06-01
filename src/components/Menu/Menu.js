@@ -9,7 +9,7 @@ function Menu() {
   	<div className="menu">
       <Link />
       <Link />
-      <Link active />
+      <Link active primary />
     </div>
   );
 }
